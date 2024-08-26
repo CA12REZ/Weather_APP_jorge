@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.weatherapp">
+
+    <!-- Permisos necesarios para la aplicación -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Especificar que la aplicación está diseñada para dispositivos Wear OS -->
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault">
+
+        <!-- Declarar la SecondActivityWear -->
+        <activity
+            android:name=".presentation.SecondActivityWear"
+            android:exported="false"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+            <!-- Si SecondActivityWear puede ser invocada desde otras apps, considera agregar un intent-filter -->
+        </activity>
+
+        <!-- Declarar la MainActivity, que es el punto de entrada -->
+        <activity
+            android:name=".presentation.MainActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.DeviceDefault.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Configuración específica para Wear OS -->
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="true" />
+
+        <!-- Metadatos para especificar que la aplicación es independiente -->
+        <meta-data
+            android:name="com.google.android.wearable.standalone"
+            android:value="true" />
+
+    </application>
+</manifest>

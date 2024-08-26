@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondovista1"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#040101"
+        android:hint="Escribe una ciudad"
+        android:inputType="text"
+        android:textColor="#070606"
+        android:textColorHint="#C30000" />
+
+    <Button
+        android:id="@+id/buttonGetWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:padding="10dp"
+        android:text="Obtener clima"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textViewWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:text="Información del clima..."
+        android:textAlignment="center"
+        android:textColor="#D70101" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="122dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E61515"
+        android:text="Usuario" />
+</LinearLayout>
